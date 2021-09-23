@@ -16,4 +16,9 @@ public class Shoot {
         Shoot shoot = (Shoot) o;
         return x == shoot.x && y == shoot.y;
     }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(x, y);
+    }
 }
