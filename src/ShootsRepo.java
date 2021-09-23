@@ -6,9 +6,7 @@ public class ShootsRepo {
 
     public void shoot(int x, int y) {
         Shoot shoot = new Shoot(x, y);
-        if (!shoots.contains(shoot)) {
-            shoots.add(shoot);
-        } else {
+        if (!shoots.add(shoot)) {
             System.out.println("Już strzelałeś w to miejsce");
         }
     }
